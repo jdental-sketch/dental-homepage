@@ -3,242 +3,60 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="정치과의원 진료 안내, 오시는 길, 시설 사진 및 공지사항">
-  <title>정치과의원 | 건강한 미소</title>
-  <style>
-    :root {
-      --green: #167d73;
-      --green-dark: #105d56;
-      --ink: #20312f;
-      --muted: #657572;
-      --pale: #eef7f5;
-      --line: #dce8e5;
-      --white: #fff;
-    }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      color: var(--ink);
-      background: #fbfdfc;
-      font-family: -apple-system, BlinkMacSystemFont, "Noto Sans KR", "Malgun Gothic", sans-serif;
-      line-height: 1.65;
-    }
-    a { color: inherit; }
-    .wrap { width: min(100% - 32px, 1040px); margin-inline: auto; }
-    header {
-      position: sticky; top: 0; z-index: 5;
-      background: rgba(255,255,255,.96);
-      border-bottom: 1px solid var(--line);
-      backdrop-filter: blur(10px);
-    }
-    .nav { min-height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
-    .brand { color: var(--green-dark); text-decoration: none; font-size: 1.18rem; font-weight: 800; }
-    nav { display: flex; gap: 15px; flex-wrap: wrap; }
-    nav a { text-decoration: none; font-size: .9rem; font-weight: 650; }
-    nav a:hover { color: var(--green); }
-    .hero {
-      padding: 58px 0 42px;
-      background: linear-gradient(135deg, #edf8f5, #fff 72%);
-    }
-    .hero-grid { display: grid; grid-template-columns: 1.1fr .9fr; align-items: center; gap: 28px; }
-    .eyebrow { color: var(--green); font-weight: 800; letter-spacing: .12em; font-size: .8rem; }
-    h1 { font-size: clamp(2rem, 6vw, 3.4rem); line-height: 1.2; margin: 12px 0 16px; letter-spacing: -.04em; }
-    .lead { color: var(--muted); font-size: 1.05rem; max-width: 38rem; }
-    .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
-    .btn {
-      display: inline-flex; align-items: center; justify-content: center;
-      min-height: 46px; padding: 11px 17px; border-radius: 12px;
-      text-decoration: none; font-weight: 750; border: 1px solid var(--line);
-      background: white;
-    }
-    .btn.primary { background: var(--green); color: white; border-color: var(--green); }
-    .hero-art {
-      min-height: 255px; border-radius: 24px; padding: 24px;
-      background: linear-gradient(145deg, #c9e8e0, #edf7f4);
-      display: grid; place-items: center; overflow: hidden;
-    }
-    .hero-art-inner {
-      width: 100%; max-width: 330px; min-height: 200px; border-radius: 18px;
-      background: rgba(255,255,255,.78); display: grid; place-items: center;
-      text-align: center; padding: 22px; color: var(--green-dark);
-    }
-    .tooth { font-size: 4rem; line-height: 1.1; }
-    section { padding: 48px 0; }
-    .section-head { margin-bottom: 22px; }
-    .section-head h2 { margin: 0 0 6px; font-size: clamp(1.5rem, 4vw, 2rem); }
-    .section-head p { color: var(--muted); margin: 0; }
-    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
-    .card { border: 1px solid var(--line); border-radius: 17px; background: white; padding: 20px; }
-    .card .symbol { font-size: 1.8rem; }
-    .card h3 { margin: 9px 0 5px; }
-    .card p { color: var(--muted); margin: 0; font-size: .95rem; }
-    .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
-    .photo {
-      min-height: 160px; border-radius: 16px; padding: 16px;
-      background: var(--pale); border: 1px dashed #9fcac1;
-      display: flex; align-items: end; color: var(--green-dark); font-weight: 750;
-    }
-    .photo small { display: block; font-weight: 500; color: var(--muted); }
-    .notice-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
-    .notice-list li { display: flex; justify-content: space-between; gap: 16px; padding: 15px 2px; border-bottom: 1px solid var(--line); }
-    .notice-list time { color: var(--muted); white-space: nowrap; font-size: .9rem; }
-    .location-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .info-box { background: white; border: 1px solid var(--line); border-radius: 17px; padding: 22px; }
-    .info-box p { margin: 8px 0; }
-    .map-placeholder {
-      min-height: 220px; border-radius: 17px; background: #e9f3f1;
-      display: grid; place-items: center; text-align: center; padding: 20px; color: var(--green-dark);
-    }
-    footer { background: #183d39; color: white; padding: 28px 0; font-size: .9rem; }
-    footer p { margin: 4px 0; opacity: .9; }
-    .mobile-call { display: none; }
-    @media (max-width: 720px) {
-      .nav { align-items: flex-start; padding: 14px 0; flex-direction: column; }
-      nav { gap: 10px 14px; }
-      nav a { font-size: .84rem; }
-      .hero { padding: 38px 0 28px; }
-      .hero-grid, .location-grid { grid-template-columns: 1fr; }
-      .hero-art { min-height: 190px; }
-      .cards { grid-template-columns: 1fr 1fr; }
-      .gallery { grid-template-columns: 1fr 1fr; }
-      .photo { min-height: 125px; }
-      section { padding: 36px 0; }
-      .mobile-call {
-        display: block; position: fixed; z-index: 10; bottom: 12px; left: 12px; right: 12px;
-        background: var(--green); color: white; border-radius: 14px; padding: 14px;
-        text-align: center; text-decoration: none; font-weight: 800;
-        box-shadow: 0 6px 24px rgba(0,0,0,.18);
-      }
-      body { padding-bottom: 70px; }
-    }
-    @media (max-width: 420px) {
-      .cards { grid-template-columns: 1fr; }
-      .gallery { grid-template-columns: 1fr 1fr; }
-      .notice-list li { flex-direction: column; gap: 2px; }
-    }
-  </style>
+  <meta name="description" content="정치과의원 홈페이지. 진료안내, 치과둘러보기, 공지사항, 오시는길을 확인하세요.">
+  <title>홈 | 정치과의원</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- 아래의 치과명, 전화번호, 주소, 진료시간을 실제 정보로 바꾸세요. -->
   <header>
     <div class="wrap nav">
-      <a class="brand" href="#home">정치과의원</a>
+      <a class="brand" href="index.html">정치과의원</a>
       <nav aria-label="주요 메뉴">
-        <a href="#care">진료 안내</a>
-        <a href="#gallery">치과 둘러보기</a>
-        <a href="#notice">공지사항</a>
-        <a href="#location">오시는 길</a>
+        <a href="index.html" aria-current="page">홈</a>
+        <a href="treatment.html">진료안내</a>
+        <a href="tour.html">치과둘러보기</a>
+        <a href="notice.html">공지사항</a>
+        <a href="location.html">오시는길</a>
       </nav>
     </div>
   </header>
-
   <main>
-    <section class="hero" id="home">
+    <section class="hero">
       <div class="wrap hero-grid">
         <div>
           <div class="eyebrow">YOUR SMILE, OUR CARE</div>
           <h1>건강한 미소를 위한<br>편안한 치과 진료</h1>
-          <p class="lead">환자 한 분 한 분의 이야기를 듣고, 구강 상태에 맞는 진료 계획을 함께 고민합니다.</p>
+          <p class="lead">환자 한 분 한 분의 이야기를 듣고, 구강 상태에 맞는 진료 계획을 함께 고민합니다. 아래 메뉴에서 필요한 정보를 확인해 주세요.</p>
           <div class="actions">
             <a class="btn primary" href="tel:0544750875">☎ 054-475-0875 전화</a>
-            <a class="btn" href="tel:0544750876">☎ 054-475-0876 전화</a>
-            <a class="btn" href="#location">⌖ 오시는 길</a>
+            <a class="btn" href="location.html">⌖ 오시는 길</a>
           </div>
         </div>
-        <div class="hero-art" aria-label="치과 소개 이미지 자리">
-          <div class="hero-art-inner">
-            <div class="tooth" aria-hidden="true">✧</div>
-            <strong>정치과의원</strong>
-            <span>정확한 안내 · 편안한 진료</span>
-            <small>이 영역은 실제 치과 사진으로 교체할 수 있습니다.</small>
-          </div>
+        <div class="hero-art" aria-label="치과 소개 영역">
+          <div class="hero-art-inner"><div class="tooth" aria-hidden="true">✧</div><strong>정치과의원</strong><span>정확한 안내 · 편안한 진료</span><small>이 영역은 실제 치과 사진으로 교체할 수 있습니다.</small></div>
         </div>
       </div>
     </section>
-
-    <section id="care">
+    <section>
       <div class="wrap">
-        <div class="section-head">
-          <h2>진료 안내</h2>
-          <p>진료시간과 휴진일을 확인하신 뒤 방문해 주세요.</p>
-        </div>
+        <div class="section-head"><h2>무엇을 찾으시나요?</h2><p>메뉴를 선택하면 해당 안내 페이지로 이동합니다.</p></div>
         <div class="cards">
-          <article class="card"><div class="symbol">✦</div><h3>심미치과</h3><p>치아의 모양과 색상 등 심미적 고민에 대해 상담합니다.</p></article>
-          <article class="card"><div class="symbol">◉</div><h3>임플란트</h3><p>구강 상태와 검사 결과를 바탕으로 치료 방법을 안내합니다.</p></article>
-          <article class="card"><div class="symbol">▱</div><h3>틀니·보철</h3><p>치아 상실 및 보철 치료에 관해 상담합니다.</p></article>
-          <article class="card"><div class="symbol">◇</div><h3>충치 치료</h3><p>충치와 치아 손상에 대한 진단 및 치료를 진행합니다.</p></article>
-          <article class="card"><div class="symbol">＋</div><h3>잇몸 관리</h3><p>잇몸 건강을 확인하고 관리 방법을 안내합니다.</p></article>
-          <article class="card"><div class="symbol">☏</div><h3>진료 상담</h3><p>궁금한 점은 전화로 문의해 주세요.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section id="gallery" style="background:#f3f9f7">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>치과 둘러보기</h2>
-          <p>아래 칸에 실제 대기실, 진료실, 장비 등의 사진을 넣어 보세요.</p>
-        </div>
-        <div class="gallery">
-          <div class="photo">대기실 사진<small>사진 1</small></div>
-          <div class="photo">진료실 사진<small>사진 2</small></div>
-          <div class="photo">진료 장비 사진<small>사진 3</small></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="notice">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>공지사항</h2>
-          <p>휴진 및 진료 일정 안내를 게시하는 공간입니다.</p>
-        </div>
-        <ul class="notice-list">
-          <li><span>진료시간 및 휴진 일정은 전화로 확인해 주세요.</span><time>안내</time></li>
-          <li><span>방문 전 예약 및 진료 가능 여부를 문의해 주세요.</span><time>안내</time></li>
-          <li><span>새로운 공지사항은 이 목록에 추가할 수 있습니다.</span><time>안내</time></li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="location" style="background:#f3f9f7">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>오시는 길</h2>
-          <p>경북 구미시 흥안로 22로 오시면 됩니다.</p>
-        </div>
-        <div class="location-grid">
-          <div class="info-box">
-            <h3>정치과의원</h3>
-            <p><strong>주소</strong> 경북 구미시 흥안로 22</p>
-            <p><strong>전화</strong> <a href="tel:0544750875">054-475-0875 / 0876</a></p>
-            <p><strong>진료시간</strong> 평일 10:00~17:00</p>
-            <p><strong>목요일</strong> 휴진</p>
-            <p><strong>토요일</strong> 09:30~13:00</p>
-            <p><strong>휴진</strong> 목요일</p>
-            <div class="actions">
-              <a class="btn primary" href="https://map.naver.com/p/search/구미시%20흥안로%2022" target="_blank" rel="noopener">네이버 지도 열기</a>
-              <a class="btn" href="https://map.kakao.com/link/search/구미시%20흥안로%2022" target="_blank" rel="noopener">카카오맵 열기</a>
-            </div>
-          </div>
-          <div class="map-placeholder">
-            <div><div style="font-size:2rem">⌖</div><strong>지도 연결 영역</strong><p>지도에서 '경북 구미시 흥안로 22'를 검색해 주세요.</p></div>
-          </div>
+          <a class="card card-link" href="treatment.html"><div class="symbol">✦</div><h3>진료안내</h3><p>심미치과, 임플란트, 틀니·보철 등 진료 분야를 확인하세요.</p><span class="more">진료안내 보기 →</span></a>
+          <a class="card card-link" href="tour.html"><div class="symbol">▧</div><h3>치과둘러보기</h3><p>대기실과 진료실, 장비 사진을 살펴보세요.</p><span class="more">치과둘러보기 →</span></a>
+          <a class="card card-link" href="notice.html"><div class="symbol">☷</div><h3>공지사항</h3><p>방문 전 진료 일정과 휴진 안내를 확인하세요.</p><span class="more">공지사항 보기 →</span></a>
+          <a class="card card-link" href="location.html"><div class="symbol">⌖</div><h3>오시는길</h3><p>주소와 전화번호, 지도 안내를 확인하세요.</p><span class="more">오시는길 보기 →</span></a>
         </div>
       </div>
     </section>
   </main>
-
   <footer>
     <div class="wrap">
       <strong>정치과의원</strong>
       <p>주소: 경북 구미시 흥안로 22</p>
-      <p>전화: 054-475-0875, 054-475-0876<br>평일 10:00~17:00 · 목요일 휴진 · 토요일 09:30~13:00</p>
+      <p>전화: <a href="tel:0544750875">054-475-0875</a>, <a href="tel:0544750876">054-475-0876</a><br>평일 10:00~17:00 · 목요일 휴진 · 토요일 09:30~13:00</p>
       <p>본 사이트의 진료 안내는 일반적인 정보이며, 구체적인 진단과 치료는 내원 상담을 통해 안내합니다.</p>
     </div>
   </footer>
-
   <a class="mobile-call" href="tel:0544750875">☎ 정치과의원 전화하기 (054-475-0875)</a>
 </body>
 </html>

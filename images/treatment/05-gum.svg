@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="잇몸 관리">
+<title>잇몸 관리</title>
+<rect x="0" y="0" width="200" height="200" rx="36" fill="#E3F2EE"/>
+
+<rect x="46" y="96" width="20" height="40" rx="8" fill="#FFFFFF" stroke="#183D39" stroke-width="3.5"/><rect x="70" y="96" width="20" height="40" rx="8" fill="#FFFFFF" stroke="#183D39" stroke-width="3.5"/><rect x="94" y="96" width="20" height="40" rx="8" fill="#FFFFFF" stroke="#183D39" stroke-width="3.5"/><rect x="118" y="96" width="20" height="40" rx="8" fill="#FFFFFF" stroke="#183D39" stroke-width="3.5"/><rect x="142" y="96" width="20" height="40" rx="8" fill="#FFFFFF" stroke="#183D39" stroke-width="3.5"/>
+<path d="M34 100 Q46 84 56 100 Q68 84 80 100 Q92 84 104 100 Q116 84 128 100 Q140 84 152 100 Q160 88 168 96 L168 76 Q100 64 32 76 Z" fill="#F3A9B4" stroke="#183D39" stroke-width="4" stroke-linejoin="round"/>
+<g transform="rotate(-28 120 48)">
+<rect x="58" y="40" width="96" height="14" rx="7" fill="#4FB0A0" stroke="#183D39" stroke-width="3.5"/>
+<rect x="128" y="22" width="30" height="18" rx="4" fill="#FFFFFF" stroke="#183D39" stroke-width="3"/>
+<path d="M134 22 v18 M141 22 v18 M148 22 v18 M155 22 v18" stroke="#167D73" stroke-width="3"/>
+</g>
+<circle cx="52" cy="150" r="6" fill="#FFFFFF" stroke="#167D73" stroke-width="3"/>
+<circle cx="70" cy="160" r="4" fill="#FFFFFF" stroke="#167D73" stroke-width="3"/>
+<circle cx="150" cy="156" r="5" fill="#FFFFFF" stroke="#167D73" stroke-width="3"/>
+
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="충치 치료">
+<title>충치 치료</title>
+<rect x="0" y="0" width="200" height="200" rx="36" fill="#E3F2EE"/>
+
+<ellipse cx="92" cy="168" rx="36" ry="6" fill="#167D73" opacity="0.15"/>
+<g transform="translate(-10 0)">
+<path d="M60 52 C60 36 80 33 100 42 C120 33 140 36 140 52 C142 76 136 96 130 110 C126 126 124 150 116 155 C108 158 106 130 100 121 C94 130 92 158 84 155 C76 150 74 126 70 110 C64 96 58 76 60 52 Z" fill="#FFFFFF" stroke="#183D39" stroke-width="4" stroke-linejoin="round"/>
+<path d="M74 56 C76 47 86 45 92 49" fill="none" stroke="#E3F2EE" stroke-width="7" stroke-linecap="round"/>
+<path d="M116 64 q8 -4 12 4 q2 8 -6 10 q-8 1 -9 -6 z" fill="#8A6A4F"/>
+</g>
+<circle cx="138" cy="112" r="24" fill="#FFFFFF" fill-opacity="0.55" stroke="#167D73" stroke-width="7"/>
+<path d="M155 129 L174 148" stroke="#167D73" stroke-width="10" stroke-linecap="round"/>
+<path d="M128 102 a12 12 0 0 1 10 -6" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+
+</svg>

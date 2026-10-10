@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="임플란트">
+<title>임플란트</title>
+<rect x="0" y="0" width="200" height="200" rx="36" fill="#E3F2EE"/>
+
+<rect x="30" y="104" width="140" height="62" rx="18" fill="#F9D3D9"/>
+<path d="M30 112 Q65 100 100 108 Q135 100 170 112" fill="none" stroke="#F3A9B4" stroke-width="6" stroke-linecap="round"/>
+<rect x="88" y="98" width="24" height="16" rx="3" fill="#AFC2BD" stroke="#183D39" stroke-width="3.5"/>
+<path d="M90 114 L110 114 L106 160 Q100 168 94 160 Z" fill="#CFDCD8" stroke="#183D39" stroke-width="3.5" stroke-linejoin="round"/>
+<path d="M90 124 L110 120 M91 134 L109 130 M92 144 L108 140 M93 154 L107 150" stroke="#183D39" stroke-width="3" stroke-linecap="round"/>
+<path d="M66 70 C66 48 84 40 100 46 C116 40 134 48 134 70 C134 86 126 98 112 98 L88 98 C74 98 66 86 66 70 Z" fill="#FFFFFF" stroke="#183D39" stroke-width="4" stroke-linejoin="round"/>
+<path d="M78 62 C80 55 87 53 92 56" fill="none" stroke="#E3F2EE" stroke-width="6" stroke-linecap="round"/>
+<path d="M152 36 Q153.8 44.2 162 46 Q153.8 47.8 152 56 Q150.2 47.8 142 46 Q150.2 44.2 152 36 Z" fill="#4FB0A0"/>
+
+</svg>

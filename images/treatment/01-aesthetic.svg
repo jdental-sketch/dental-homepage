@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="심미치과">
+<title>심미치과</title>
+<rect x="0" y="0" width="200" height="200" rx="36" fill="#E3F2EE"/>
+
+<ellipse cx="100" cy="168" rx="38" ry="6" fill="#167D73" opacity="0.15"/>
+<path d="M60 52 C60 36 80 33 100 42 C120 33 140 36 140 52 C142 76 136 96 130 110 C126 126 124 150 116 155 C108 158 106 130 100 121 C94 130 92 158 84 155 C76 150 74 126 70 110 C64 96 58 76 60 52 Z" fill="#FFFFFF" stroke="#183D39" stroke-width="4" stroke-linejoin="round"/>
+<path d="M74 56 C76 47 86 45 92 49" fill="none" stroke="#E3F2EE" stroke-width="7" stroke-linecap="round"/>
+<path d="M84 92 Q100 104 116 92" fill="none" stroke="#183D39" stroke-width="4" stroke-linecap="round"/>
+<circle cx="86" cy="78" r="3.5" fill="#183D39"/><circle cx="114" cy="78" r="3.5" fill="#183D39"/>
+<path d="M152 34 Q154.52 45.48 166 48 Q154.52 50.52 152 62 Q149.48 50.52 138 48 Q149.48 45.48 152 34 Z" fill="#F6C453"/><path d="M46 83 Q47.62 90.38 55 92 Q47.62 93.62 46 101 Q44.38 93.62 37 92 Q44.38 90.38 46 83 Z" fill="#4FB0A0"/><path d="M156 97 Q157.26 102.74 163 104 Q157.26 105.26 156 111 Q154.74 105.26 149 104 Q154.74 102.74 156 97 Z" fill="#4FB0A0"/><path d="M50 38 Q51.08 42.92 56 44 Q51.08 45.08 50 50 Q48.92 45.08 44 44 Q48.92 42.92 50 38 Z" fill="#F6C453"/>
+
+</svg>
